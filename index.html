@@ -5,101 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GATI'S CRAFTY CORNER</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <header>
-        <h1>GATI'S-CRAFTY<span>CORNER.</span></h1>
-        <nav>
+        <div class="header-container">
+            <h1>GATI'S-CRAFTY<span>CORNER.</span></h1>
+            <button id="menu-toggler" class="menu-toggler">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <nav id="navbar" class="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#shop">Shop</a></li>
-                <li><a href="#custom-orders">Custom Orders</a></li>
+                <li><a href="#custom-orders">Orders</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h2>Handmade Crochet Treasures</h2>
-        <p>Beautifully crafted with love and care.WELCOME ALL.</p>
-        <a href="#shop" class="btn">Shop Now 
-        </a>
-    </section>
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Handmade Crochet Treasures</h1>
+        <p>Beautifully crafted with love and care. Welcome to GATI'S CRAFTY CORNER!</p>
+        <a href="#shop" class="btn">Shop Now</a>
+    </div>
+</section>
 
     <!-- About Section -->
-    <section id="about">
+<section id="about">
+    <div class="about-container">
         <h2>About Us</h2>
-        <p>Welcome to GATI'S CRAFTY CORNER! We create handmade crochet items with love and attention to detail.Our products are of high quality and at affordable prices.Our products are of a variety ranging from newborns,teens to adults of both gender.Come with your inspo, lets create art.</p>
-    </section>
+        <p>Welcome to GATI'S CRAFTY CORNER! We create handmade crochet items with love and attention to detail. Our products are of high quality and at affordable prices. Our range includes items for newborns, teens, and adults of all genders. Bring your inspiration, and let's create art together!</p>
+        <div class="about-highlights">
+            <div class="highlight">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Handmade with Love</h3>
+                <p>Each item is crafted with care and dedication.</p>
+            </div>
+            <div class="highlight">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <h3>Affordable Prices</h3>
+                <p>High-quality products at budget-friendly rates.</p>
+            </div>
+            <div class="highlight">
+                <i class="fa-solid fa-gift"></i>
+                <h3>Customizable Gifts</h3>
+                <p>Create personalized gifts for your loved ones.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Shop Section -->
     <section id="shop">
         <h2>Shop Our Products</h2>
         <div class="product-grid">
-            <div class="product">
-                <img src="Pictures/1.2.jpg" alt="Rufle Hat">
-                <h3>A ruffle Hat.</h3>
+            <div class="product" data-name="Ruffle Hat" data-price="550">
+                <img src="Pictures/1.2.jpg" alt="Ruffle Hat">
+                <h3>Ruffle Hat</h3>
                 <p>Ksh550.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Bikini Top" data-price="400">
                 <img src="Pictures/2.1.jpg" alt="Bikini top">
-                <h3>Bikini top.</h3>
+                <h3>Bikini Top</h3>
                 <p>Ksh400.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Bikini Bottom" data-price="400">
                 <img src="Pictures/3.1.jpg" alt="Bikini bottom">
-                <h3>Bikini bottom[pant].</h3>
+                <h3>Bikini Bottom</h3>
                 <p>Ksh400.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
-            <img src="Pictures/4.1.jpg" alt="Bikini coverup">
-            <h3>Bikini cover-up.</h3>
-            <p>Ksh300.00</p>
-            <button>Add to Cart</button>
+            <div class="product" data-name="Bikini Cover-Up" data-price="300">
+                <img src="Pictures/4.1.jpg" alt="Bikini cover-up">
+                <h3>Bikini Cover-Up</h3>
+                <p>Ksh300.00</p>
+                <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Bikini Set" data-price="1500">
                 <img src="Pictures/1.jpg" alt="Bikini set">
-                <h3>Bikini set.</h3>
+                <h3>Bikini Set</h3>
                 <p>Ksh1500.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Unisex Shirt" data-price="1600">
                 <img src="Pictures/6.jpg" alt="Shirt">
-                <h3>Crotchet unisex shirt with collar.</h3>
+                <h3>Crochet Unisex Shirt with Collar</h3>
                 <p>Ksh1600.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Crochet Rose Flower" data-price="200">
                 <img src="Pictures/7.jpg" alt="Rose flower">
-                <h3>Crotchet rose flower.
-                    10% Discount on orders above 6.
-                </h3>
+                <h3>Crochet Rose Flower (10% Discount on orders above 6)</h3>
                 <p>Ksh200.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Crochet Shrug" data-price="600">
                 <img src="Pictures/9.jpg" alt="Shrug">
-                <h3>Crotchet shrug.</h3>
+                <h3>Crochet Shrug</h3>
                 <p>Ksh600.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Daisy Tote Bag" data-price="550">
                 <img src="Pictures/10.jpg" alt="Tote bag">
-                <h3>Daisy crotchet tote bag.</h3>
+                <h3>Daisy Crochet Tote Bag</h3>
                 <p>Ksh550.00</p>
                 <button>Add to Cart</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Daisy Checkered Tote Bag" data-price="700">
                 <img src="Pictures/11.jpg" alt="Checkered tote bag">
-                <h3>Daisy checkered tote bag.</h3>
+                <h3>Daisy Checkered Tote Bag</h3>
                 <p>Ksh700.00</p>
                 <button>Add to Cart</button>
             </div>
@@ -107,50 +131,87 @@
     </section>
 
     <!-- Custom Orders -->
-    <section id="custom-orders">
-        <h2>Custom Orders</h2>
-        <p>Want to order? Fill out the form below!</p>
-        <form> 
-            <body>
-            <div class="input-group">  
-            Your Name:<label for="name"></label>
-            <input type="text" id="name" required>
-            </div>
-            <div class="input-group">
-                Your Email:<label for="email"></label>
-            <input type="email" id="email" required>
-            </div>
+<section id="custom-orders">
+    <h2>Custom Orders</h2>
+    <p>Want to order? Fill out the form below!</p>
+    <form>
+        <div class="input-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
             <label for="order-details">Order Details:</label>
             <select id="order-details" name="order-details">
-            <option value="Rufle Hat">Rufle Hat</option>
-            <option value="Bikini Top">Bikini Top</option>
-            <option value="Bikini pant">Bikini Pant</option>
-            <option value="Bikini coverup">Bikini Coverup</option>
-            <option value="Bikini set">Bikini Set</option>
-            <option value="Unisex shirt">Unisex Shirt</option>
-            <option value="Crortchet shrug"> Crotchet shrug</option>
-            <option value="Rose flower"> Rose Flower</option>
-            <option value="Daisy tote bag">Tote bag</option>
-            <option value="Daisy checkerd bag">Checkered bag</option>
+                <option value="Ruffle Hat">Ruffle Hat</option>
+                <option value="Bikini Top">Bikini Top</option>
+                <option value="Bikini Bottom">Bikini Bottom</option>
+                <option value="Bikini Cover-Up">Bikini Cover-Up</option>
+                <option value="Bikini Set">Bikini Set</option>
+                <option value="Unisex Shirt">Unisex Shirt</option>
+                <option value="Crochet Shrug">Crochet Shrug</option>
+                <option value="Crochet Rose Flower">Crochet Rose Flower</option>
+                <option value="Daisy Tote Bag">Daisy Tote Bag</option>
+                <option value="Daisy Checkered Tote Bag">Daisy Checkered Tote Bag</option>
             </select>
-            <br><br>
-            <button type="submit" class="btn">Submit</button>
-            </body>
-        </form>
-    </section>
+        </div>
+        <div class="input-group">
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional-info" placeholder="Describe your custom order here..."></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+   <!-- Contact Section -->
+<section id="contact">
+    <div class="contact-container">
         <h2>Contact Us</h2>
-        <p>Email: gaticraftycorner@gmail.com</p>
-        <p>Follow us on <a href="#"><i class="fa-brands fa-instagram">Instagram</i></a>&
-            <a href="#"><i class="fa-brands fa-tiktok">Tiktok</i></a>
-    </section>
+        <p>Have questions or want to place an order? Reach out to us!</p>
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email: gaticraftycorner@gmail.com</p>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <p>Phone: +254 123 456 789</p>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Location: Nairobi, Kenya</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Gati's-crafty corner. All Rights Reserved.</p>
     </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: Ksh<span id="cart-total">0.00</span></p>
+            <button id="checkout-btn" class="btn">Checkout</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
