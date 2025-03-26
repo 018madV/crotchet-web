@@ -21,36 +21,58 @@ h1, h2, h3, p, button, input, select, textarea, a {
 /* Navigation Bar */
 header {
     background: pink;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px; /* Adjust padding as needed */
+    position: relative; /* Needed for positioning the menu toggler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo and menu toggler */
     align-items: center;
     width: 100%;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Adjusted for balance */
+    color: burlywood;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: burlywood;
 }
 
 h1 span {
     color: aqua;
 }
 
+.menu-toggler {
+    position: absolute; /* Position the menu toggler */
+    top: 15px; /* Align with header padding */
+    right: 20px; /* Push to the top-right corner */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: green;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggler:hover {
+    transform: scale(1.2); /* Enlarge toggler icon on hover */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    align-items: center;
+    width: 100%;
+    margin-top: 10px; /* Add spacing below the header container */
+}
+
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Space between navigation links */
     margin: 0;
     padding: 0;
 }
@@ -70,26 +92,12 @@ h1 span {
     color: red;
 }
 
-.menu-toggler {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: green;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.menu-toggler:hover {
-    transform: scale(1.2);
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
-        display: none;
-        gap: 10px;
+        display: none; /* Hide by default on mobile */
+        gap: 10px; /* Reduce gap for compactness */
     }
 
     .navbar.active ul {
@@ -98,20 +106,20 @@ h1 span {
     }
 
     header {
-        padding: 10px;
+        padding: 10px; /* Reduce padding for smaller screens */
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
     }
 
     .navbar ul li a {
-        font-size: 0.9rem;
-        padding: 6px 10px;
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        padding: 6px 10px; /* Reduce padding for smaller screens */
     }
 
     .menu-toggler {
-        display: block;
+        display: block; /* Show toggler on mobile */
     }
 }
 
