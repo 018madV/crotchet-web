@@ -11,9 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let cart = [];
     let total = 0;
 
-    // Toggle Navbar Menu
+    // Toggle Navbar Menu and Icon
     menuToggler.addEventListener("click", () => {
         navbar.classList.toggle("active");
+
+        // Toggle between hamburger icon and close icon
+        const icon = menuToggler.querySelector("i");
+        if (icon.classList.contains("fa-bars")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times"); // Change to "X" icon
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars"); // Change back to hamburger icon
+        }
     });
 
     // Open Cart Modal
