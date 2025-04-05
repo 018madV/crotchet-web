@@ -12,6 +12,26 @@ body {
     line-height: 1.6;
     text-align: center;
 }
+/* Header Styling */
+header {
+    position: relative; /* Ensures child elements are positioned relative to the header */
+    text-align: center; /* Centers all content inside the header */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    gap: 10px; /* Adds spacing between elements */
+}
+
+.menu-toggler {
+    margin: 0 auto; /* Centers the toggler horizontally */
+    display: block; /* Ensures proper alignment */
+    font-size: 24px; /* Adjusts the size of the menu icon */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
 
 /* Default Font Styling */
 h1, h2, h3, p, button, input, select, textarea, a {
