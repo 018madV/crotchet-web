@@ -16,7 +16,7 @@ body {
 header {
     position: relative;
     text-align: center;
-    background-color: pink;
+    background-color: #ffe6e6; /* Light pink background */
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -33,13 +33,14 @@ header {
     display: block;
     font-size: 24px;
     cursor: pointer;
-    color: #fff; /* White icon for better visibility */
+    color: #333; /* Dark text for better visibility */
 }
 
+/* Navigation Bar */
 .navbar {
     display: none; /* Hidden by default on mobile */
     flex-direction: column;
-    background-color: #pink; /* Match the header color */
+    background-color: #ffe6e6; /* Match the header's light pink color */
     padding: 1rem;
     position: absolute;
     top: 100%;
@@ -57,29 +58,45 @@ header {
 
 .navbar a {
     text-decoration: none;
-    color: #fff; /* White links for contrast */
+    color: #333; /* Dark text for contrast */
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #ffebeb; /* Lighter shade on hover */
+    color: #ff6f61; /* Slightly darker pink on hover */
 }
 
-.menu-toggler {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: green;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+/* Show Navbar on Menu Toggle */
+.navbar.active {
+    display: flex; /* Show navbar when toggled */
 }
 
-.menu-toggler:hover {
-    transform: scale(1.2);
-}
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    /* Adjust layout for larger screens */
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .menu-toggler {
+        display: none; /* Hide toggler on larger screens */
+    }
+
+    .navbar {
+        display: flex; /* Always show navbar */
+        flex-direction: row;
+        justify-content: center;
+        position: static;
+        box-shadow: none;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar ul {
