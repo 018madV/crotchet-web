@@ -16,8 +16,7 @@ body {
 header {
     position: relative;
     text-align: center;
-    background-color: #ff6f61; /* Soft pink color */
-    color: #fff; /* White text for contrast */
+    background-color: pink;
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -40,7 +39,7 @@ header {
 .navbar {
     display: none; /* Hidden by default on mobile */
     flex-direction: column;
-    background-color: #ff6f61; /* Match the header color */
+    background-color: #pink; /* Match the header color */
     padding: 1rem;
     position: absolute;
     top: 100%;
