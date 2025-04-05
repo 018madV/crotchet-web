@@ -20,6 +20,20 @@ header {
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+h2{
+    font-size:20px;
+    margin: 10px;
+    padding:10px;
+    color:blue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
+
+}
+h2 span{
+    color:aqua;
+    text-decoration: none;
+    text-transform: uppercase;}
 
 .header-container {
     display: flex;
