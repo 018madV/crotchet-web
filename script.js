@@ -196,4 +196,12 @@ checkoutBtn.addEventListener('click', () => {
         cartModal.style.display = 'none'; // Close the modal
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggler = document.querySelector(".menu-toggler");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggler.addEventListener("click", function () {
+        navbar.classList.toggle("active"); // Toggle the 'active' class on the navbar
+    });
+});
 
