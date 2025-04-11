@@ -80,38 +80,6 @@ h1 {
 h1 span {
     color: aqua;
 }
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        display: none; /* Initially hide the navbar */
-        gap: 10px;
-    }
-
-    .navbar.active ul {
-        display: flex; /* Show the navbar when active */
-        flex-direction: column;
-    }
-
-    header {
-        padding: 10px;
-        background-color:pink;
-    }
-
-    h1 {
-        font-size: 1.2rem;
-    }
-
-    .navbar ul li a {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-
-    .menu-toggler {
-        display: block; /* Show the menu toggler on mobile */
-    }
-}
-
 /* Hero Section */
 .hero {
     background: url('Pictures/13.jpg') no-repeat center center/cover;
