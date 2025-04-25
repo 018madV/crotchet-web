@@ -200,7 +200,6 @@ header {
     font-size: 0.9rem;
     color: #555;
 }
-
 /* Shop Section */
 #shop {
     background: #f9f9f9;
@@ -235,6 +234,61 @@ header {
 .product:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.product img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 300px; /* Restricts maximum height for consistency */
+    object-fit: cover; /* Prevents distortion by cropping the image */
+    border-radius: 8px; /* Optional: Rounded corners for aesthetics */
+}
+
+/* Button Styling */
+.product button {
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: black;
+}
+
+/* Responsive Design for Shop Section */
+@media (max-width: 768px) {
+    /* Adjust heading size for smaller screens */
+    #shop h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Ensure product grid adapts to one column on small screens */
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    /* Reduce padding inside each product card */
+    .product {
+        padding: 0.75rem;
+    }
+
+    /* Adjust image size for better fit */
+    .product img {
+        max-height: 200px; /* Smaller max height for mobile */
+    }
+
+    /* Adjust button size */
+    .product button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
 }
 
 /* Contact Section */
