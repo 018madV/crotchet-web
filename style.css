@@ -292,7 +292,36 @@ header {
         padding: 0.5rem;
     }
 }
+/* Style for the image container */
+.image-container {
+    display: flex; /* Aligns images horizontally */
+    gap: 10px; /* Adds spacing between the images */
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Aligns images vertically in the center */
+    flex-wrap: wrap; /* Allows wrapping of images if screen width is too small */
+    padding: 10px; /* Adds padding around the container */
+}
 
+/* Ensure images are styled consistently */
+.image-container img {
+    max-width: 30%; /* Each image takes up 30% of the container width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    object-fit: cover; /* Ensures images don't distort */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for aesthetics */
+}
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 45%; /* Increase image size for better visibility on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img {
+        max-width: 100%; /* Stack images vertically on very small screens */
+    }
+}
 /* Contact Section */
 #contact {
     background: #fff;
