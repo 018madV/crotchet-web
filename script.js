@@ -130,3 +130,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+// Wait until the DOM has fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Select the menu toggler and navbar elements
+    const menuToggler = document.querySelector('.menu-toggler');
+    const navbar = document.querySelector('.navbar');
+
+    // Add click event listener to the menu toggler
+    menuToggler.addEventListener('click', function() {
+        // Toggle the 'active' class on the navbar to show/hide it
+        navbar.classList.toggle('active');
+    });
+});
