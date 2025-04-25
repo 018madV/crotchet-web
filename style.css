@@ -238,11 +238,12 @@ header {
 
 /* Image Styling */
 .product img {
-    width: 100%; /* Ensures the image fills the container */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 300px; /* Restricts maximum height for consistency */
-    object-fit: cover; /* Prevents distortion by cropping the image */
+    width: auto; /* Ensures the image retains its original width */
+    height: auto; /* Ensures the image retains its original height */
+    max-width: 100%; /* Prevents the image from overflowing its container */
+    object-fit: contain; /* Maintains aspect ratio without cropping */
     border-radius: 8px; /* Optional: Rounded corners for aesthetics */
+    margin: 0 auto; /* Centers the image horizontally */
 }
 
 /* Button Styling */
@@ -281,7 +282,8 @@ header {
 
     /* Adjust image size for better fit */
     .product img {
-        max-height: 200px; /* Smaller max height for mobile */
+        max-width: 80%; /* Restrict maximum width for mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 
     /* Adjust button size */
