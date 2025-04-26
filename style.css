@@ -253,7 +253,63 @@ h1 span {
     color: #333;
 }
 
-/* Product Grid Styling */
+/* Product Detail Page Styling */
+.product-detail {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-detail h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.product-detail p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-detail button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.product-detail button:hover {
+    background-color: #e05d50;
+}
+
+/* Responsive Design for Product Detail Pages */
+@media (max-width: 768px) {
+    .product-detail h1 {
+        font-size: 1.5rem;
+    }
+    .product-detail p {
+        font-size: 0.9rem;
+    }
+    .product-detail button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
@@ -261,7 +317,7 @@ h1 span {
     padding: 1rem;
 }
 
-/* Product Styling */
+/* Product Grid Styling */
 .product {
     text-align: center;
     background: #fff;
