@@ -331,7 +331,8 @@ h1 span {
     gap: 10px; /* Adds spacing between the images */
     justify-content: center; /* Centers the images horizontally */
     align-items: center; /* Aligns images vertically in the center */
-     max-height: 300px; /* Restricts maximum height for consistency */
+    max-height: 300px; /* Restricts maximum height for consistency */
+    object-fit: cover; /* Prevents distortion by cropping the image */
 }
 
 /* Ensure images are styled consistently */
