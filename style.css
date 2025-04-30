@@ -681,36 +681,5 @@ footer {
     height: auto; /* Maintains aspect ratio */
     border-radius: 5px; /* Optional: Adds rounded corners */
 }
-/* Image Styling */
-.product img {
-    width: 100%; /* Ensures the image fills the container */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 200px; /* Restricts maximum height for consistency */
-    object-fit: cover; /* Prevents distortion by cropping the image */
-    border-radius: 8px; /* Optional: Rounded corners for aesthetics */
-    margin-bottom: 10px; /* Adds spacing between the image and description */
-}
 
-/* Media Queries for Responsive Design */
-@media (min-width: 768px) {
-    /* Adjust layout for larger screens */
-    .product-details-container {
-        flex-direction: row; /* Switch to horizontal layout */
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .image-container {
-        flex-direction: row; /* Display images side by side */
-    }
-
-    .image-container img {
-        max-width: 200px; /* Restrict image size for larger screens */
-    }
-
-    .product-info {
-        text-align: left; /* Align description text to the left */
-        max-width: 600px; /* Limit width for better readability */
-    }
-}
 
